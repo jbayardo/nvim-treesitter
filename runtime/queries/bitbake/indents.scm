@@ -106,13 +106,13 @@
   (_) @indent.branch
   ":"
   .
-  (#lua-match? @indent.branch "^else"))
+  (#match? @indent.branch "^else"))
 
 (ERROR
   (_) @indent.branch @indent.dedent
   ":"
   .
-  (#lua-match? @indent.branch "^elif"))
+  (#match? @indent.branch "^elif"))
 
 (parenthesized_expression
   ")" @indent.end)

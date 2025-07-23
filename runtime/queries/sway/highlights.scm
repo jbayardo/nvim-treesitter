@@ -274,10 +274,10 @@
 (call_expression
   function: [
     ((identifier) @constant
-      (#lua-match? @constant "^[A-Z]"))
+      (#match? @constant "^[A-Z]"))
     (scoped_identifier
       name: ((identifier) @constant
-        (#lua-match? @constant "^[A-Z]")))
+        (#match? @constant "^[A-Z]")))
   ])
 
 ; ---
@@ -306,7 +306,7 @@
 ; Other PascalCase identifiers are assumed to be structs.
 ; ---
 ((identifier) @type
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 ; -------
 ; Functions

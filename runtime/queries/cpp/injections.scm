@@ -1,7 +1,7 @@
 ; inherits: c
 
 ((comment) @injection.content
-  (#lua-match? @injection.content "/[*/][!*/]<?[^a-zA-Z]")
+  (#match? @injection.content "/[*/][!*/]<?[^a-zA-Z]")
   (#set! injection.language "doxygen"))
 
 (raw_string_literal

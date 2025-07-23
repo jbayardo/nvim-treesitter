@@ -166,7 +166,7 @@
   (identifier)? @function.method)
 
 ((identifier) @type
-  (#lua-match? @type "^_*[A-Z][a-zA-Z0-9_]*$"))
+  (#match? @type "^_*[A-Z][a-zA-Z0-9_]*$"))
 
 ; Operators
 (unary_expression

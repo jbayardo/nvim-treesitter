@@ -8,13 +8,13 @@
 
 ; Identifier naming conventions
 ((identifier) @type
-  (#lua-match? @type "^[A-Z].*[a-z]"))
+  (#match? @type "^[A-Z].*[a-z]"))
 
 ((identifier) @constant
-  (#lua-match? @constant "^[A-Z][A-Z_0-9]*$"))
+  (#match? @constant "^[A-Z][A-Z_0-9]*$"))
 
 ((identifier) @constant.builtin
-  (#lua-match? @constant.builtin "^__[a-zA-Z0-9_]*__$"))
+  (#match? @constant.builtin "^__[a-zA-Z0-9_]*__$"))
 
 ((identifier) @constant.builtin
   (#any-of? @constant.builtin
@@ -70,7 +70,7 @@
 ((module
   .
   (comment) @keyword.directive @nospell)
-  (#lua-match? @keyword.directive "^#!/"))
+  (#match? @keyword.directive "^#!/"))
 
 (string) @string
 
@@ -342,7 +342,7 @@
 ; After @type.builtin bacause builtins (such as `type`) are valid as attribute name
 ((attribute
   attribute: (identifier) @variable.member)
-  (#lua-match? @variable.member "^[%l_].*$"))
+  (#match? @variable.member "^[a-z_].*$"))
 
 ; Class definitions
 (class_definition
@@ -362,7 +362,7 @@
     (expression_statement
       (assignment
         left: (identifier) @variable.member))))
-  (#lua-match? @variable.member "^[%l_].*$"))
+  (#match? @variable.member "^[a-z_].*$"))
 
 ((class_definition
   body: (block
@@ -370,7 +370,7 @@
       (assignment
         left: (_
           (identifier) @variable.member)))))
-  (#lua-match? @variable.member "^[%l_].*$"))
+  (#match? @variable.member "^[a-z_].*$"))
 
 ((class_definition
   (block
@@ -388,12 +388,12 @@
 
 ((call
   function: (identifier) @constructor)
-  (#lua-match? @constructor "^%u"))
+  (#match? @constructor "^[A-Z]"))
 
 ((call
   function: (attribute
     attribute: (identifier) @constructor))
-  (#lua-match? @constructor "^%u"))
+  (#match? @constructor "^[A-Z]"))
 
 ; Builtin functions
 ((call

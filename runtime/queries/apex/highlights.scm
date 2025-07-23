@@ -166,7 +166,7 @@
     name: (identifier) @constant))
 
 ((identifier) @constant
-  (#lua-match? @constant "^[A-Z][A-Z0-9_]+$")) ; SCREAM SNAKE CASE
+  (#match? @constant "^[A-Z][A-Z0-9_]+$")) ; SCREAM SNAKE CASE
 
 (this) @variable.builtin
 

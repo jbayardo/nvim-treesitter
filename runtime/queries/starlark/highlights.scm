@@ -329,9 +329,9 @@
 
 ((call
   function: (identifier) @constructor)
-  (#lua-match? @constructor "^[A-Z]"))
+  (#match? @constructor "^[A-Z]"))
 
 ((call
   function: (attribute
     attribute: (identifier) @constructor))
-  (#lua-match? @constructor "^[A-Z]"))
+  (#match? @constructor "^[A-Z]"))

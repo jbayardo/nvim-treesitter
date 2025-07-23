@@ -44,6 +44,6 @@
 
 ; Issue number (#123)
 ("text" @number
-  (#lua-match? @number "^#[0-9]+$"))
+  (#match? @number "^#[0-9]+$"))
 
 (uri) @string.special.url @nospell

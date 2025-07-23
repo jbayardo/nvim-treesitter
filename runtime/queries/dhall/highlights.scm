@@ -30,7 +30,7 @@
     (label) @type)
   (selector
     (label) @type)) @variable
-  (#lua-match? @variable "^[A-Z][^.]*$"))
+  (#match? @variable "^[A-Z][^.]*$"))
 
 ; Parameters
 (lambda_expression

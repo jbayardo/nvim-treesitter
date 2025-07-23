@@ -57,14 +57,14 @@
   type: (identifier) @type)
 
 ((identifier) @type
-  (#lua-match? @type "^[_]*[A-Z]"))
+  (#match? @type "^[_]*[A-Z]"))
 
 ; Constants
 (const_definition
   (identifier) @constant)
 
 ((identifier) @constant
-  (#lua-match? @constant "^[_A-Z][A-Z0-9_]*$"))
+  (#match? @constant "^[_A-Z][A-Z0-9_]*$"))
 
 (enum_definition
   type: (identifier) @type)
@@ -225,13 +225,13 @@
 (comment) @comment @spell
 
 ((comment) @comment.documentation
-  (#lua-match? @comment.documentation "^/[*][*][^*].*[*]/$"))
+  (#match? @comment.documentation "^/[*][*][^*].*[*]/$"))
 
 ((comment) @comment.documentation
-  (#lua-match? @comment.documentation "^///[^/]"))
+  (#match? @comment.documentation "^///[^/]"))
 
 ((comment) @comment.documentation
-  (#lua-match? @comment.documentation "^///$"))
+  (#match? @comment.documentation "^///$"))
 
 ((comment) @keyword.directive @nospell
-  (#lua-match? @keyword.directive "#!.*"))
+  (#match? @keyword.directive "#!.*"))

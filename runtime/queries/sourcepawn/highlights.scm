@@ -2,7 +2,7 @@
 
 ; Assume all-caps names are constants
 ((identifier) @constant
-  (#lua-match? @constant "^[A-Z][A-Z0-9_]+$"))
+  (#match? @constant "^[A-Z][A-Z0-9_]+$"))
 
 ; Function definitions/declarations
 (function_definition

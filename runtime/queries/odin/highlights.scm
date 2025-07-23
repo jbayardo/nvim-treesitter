@@ -192,7 +192,7 @@
   (identifier) @type)
 
 ((identifier) @type
-  (#lua-match? @type "^[_A-Z][_a-zA-Z0-9]*$")
+  (#match? @type "^[_A-Z][_a-zA-Z0-9]*$")
   (#not-has-parent? @type parameter procedure_declaration call_expression))
 
 ; Fields
@@ -213,7 +213,7 @@
 
 ; Constants
 ((identifier) @constant
-  (#lua-match? @constant "^_*[A-Z][A-Z0-9_]*$")
+  (#match? @constant "^_*[A-Z][A-Z0-9_]*$")
   (#not-has-parent? @constant type parameter))
 
 (member_expression
@@ -228,7 +228,7 @@
 ; Macros
 ((call_expression
   function: (identifier) @function.macro)
-  (#lua-match? @function.macro "^_*[A-Z][A-Z0-9_]*$"))
+  (#match? @function.macro "^_*[A-Z][A-Z0-9_]*$"))
 
 ; Attributes
 (attribute

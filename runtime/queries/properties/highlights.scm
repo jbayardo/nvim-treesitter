@@ -18,7 +18,7 @@
 
 ((substitution
   (key) @constant)
-  (#lua-match? @constant "^[A-Z_][A-Z0-9_]*$"))
+  (#match? @constant "^[A-Z_][A-Z0-9_]*$"))
 
 (substitution
   (key) @function

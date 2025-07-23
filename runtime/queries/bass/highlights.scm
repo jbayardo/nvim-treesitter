@@ -13,7 +13,7 @@
 
 ; Constants
 ((symbol) @constant
-  (#lua-match? @constant "^_*[A-Z][A-Z0-9_]*$"))
+  (#match? @constant "^_*[A-Z][A-Z0-9_]*$"))
 
 ; Functions
 (list

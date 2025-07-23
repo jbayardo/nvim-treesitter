@@ -140,7 +140,7 @@
 (builtin_type) @type.builtin
 
 ((identifier) @type
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 ; Typedefs
 (type_definition

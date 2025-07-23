@@ -12,22 +12,22 @@
 
 (command_paragraph
   (command) @keyword
-  (#lua-match? @keyword "^=head")
+  (#match? @keyword "^=head")
   (content) @markup.heading)
 
 (command_paragraph
   (command) @keyword
-  (#lua-match? @keyword "^=over")
+  (#match? @keyword "^=over")
   (content) @number)
 
 (command_paragraph
   (command) @keyword
-  (#lua-match? @keyword "^=item")
+  (#match? @keyword "^=item")
   (content) @none)
 
 (command_paragraph
   (command) @keyword
-  (#lua-match? @keyword "^=encoding")
+  (#match? @keyword "^=encoding")
   (content) @string.special)
 
 (verbatim_paragraph

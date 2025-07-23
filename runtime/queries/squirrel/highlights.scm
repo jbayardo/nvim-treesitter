@@ -108,7 +108,7 @@
 
 ; Types
 ((identifier) @type
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 (class_declaration
   (identifier) @type

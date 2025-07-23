@@ -47,11 +47,11 @@
 
 ((scoped_identifier
   path: (identifier) @type)
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 ((scoped_identifier
   name: (identifier) @type)
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 ((scoped_identifier
   name: (identifier) @constant)
@@ -60,14 +60,14 @@
 ((scoped_identifier
   path: (identifier) @type
   name: (identifier) @constant)
-  (#lua-match? @type "^[A-Z]")
-  (#lua-match? @constant "^[A-Z]"))
+  (#match? @type "^[A-Z]")
+  (#match? @constant "^[A-Z]"))
 
 ((scoped_type_identifier
   path: (identifier) @type
   name: (type_identifier) @constant)
-  (#lua-match? @type "^[A-Z]")
-  (#lua-match? @constant "^[A-Z]"))
+  (#match? @type "^[A-Z]")
+  (#match? @constant "^[A-Z]"))
 
 (scoped_use_list
   path: (identifier) @module)
@@ -84,11 +84,11 @@
 
 (use_list
   (identifier) @type
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 (use_as_clause
   alias: (identifier) @type
-  (#lua-match? @type "^[A-Z]"))
+  (#match? @type "^[A-Z]"))
 
 ; Keywords
 [
@@ -254,13 +254,13 @@
 ] @type.builtin
 
 ((identifier) @type
-  (#lua-match? @type "^[A-Z][a-zA-Z0-9_]*$"))
+  (#match? @type "^[A-Z][a-zA-Z0-9_]*$"))
 
 (type_identifier) @type
 
 ; Constants
 ((identifier) @constant
-  (#lua-match? @constant "^[A-Z_][A-Z0-9_]*$"))
+  (#match? @constant "^[A-Z_][A-Z0-9_]*$"))
 
 (enum_variant
   name: (identifier) @constant)
@@ -269,18 +269,18 @@
   function: (scoped_identifier
     "::"
     name: (identifier) @constant)
-  (#lua-match? @constant "^[A-Z]"))
+  (#match? @constant "^[A-Z]"))
 
 ((match_arm
   pattern: (match_pattern
     (identifier) @constant))
-  (#lua-match? @constant "^[A-Z]"))
+  (#match? @constant "^[A-Z]"))
 
 ((match_arm
   pattern: (match_pattern
     (scoped_identifier
       name: (identifier) @constant)))
-  (#lua-match? @constant "^[A-Z]"))
+  (#match? @constant "^[A-Z]"))
 
 ((identifier) @constant.builtin
   (#any-of? @constant.builtin "Some" "None" "Ok" "Err"))

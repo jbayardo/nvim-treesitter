@@ -24,7 +24,7 @@
 
 (attribute
   (attribute_name) @variable.member
-  (#lua-match? @variable.member "#.*"))
+  (#match? @variable.member "#.*"))
 
 (binding_name
   (identifier) @keyword)

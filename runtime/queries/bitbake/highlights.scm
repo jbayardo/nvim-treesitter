@@ -112,16 +112,16 @@
 
 ; Identifier naming conventions
 ((python_identifier) @type
-  (#lua-match? @type "^[A-Z].*[a-z]"))
+  (#match? @type "^[A-Z].*[a-z]"))
 
 ([
   (identifier)
   (python_identifier)
 ] @constant
-  (#lua-match? @constant "^[A-Z][A-Z_0-9]*$"))
+  (#match? @constant "^[A-Z][A-Z_0-9]*$"))
 
 ((python_identifier) @constant.builtin
-  (#lua-match? @constant.builtin "^__[a-zA-Z0-9_]*__$"))
+  (#match? @constant.builtin "^__[a-zA-Z0-9_]*__$"))
 
 ((python_identifier) @constant.builtin
   (#any-of? @constant.builtin

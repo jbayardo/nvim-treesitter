@@ -99,16 +99,16 @@
 (opcode) @keyword.operator
 
 ((opcode) @keyword.return
-  (#lua-match? @keyword.return "^return"))
+  (#match? @keyword.return "^return"))
 
 ((opcode) @keyword.conditional
-  (#lua-match? @keyword.conditional "^if"))
+  (#match? @keyword.conditional "^if"))
 
 ((opcode) @keyword.conditional
-  (#lua-match? @keyword.conditional "^cmp"))
+  (#match? @keyword.conditional "^cmp"))
 
 ((opcode) @keyword.exception
-  (#lua-match? @keyword.exception "^throw"))
+  (#match? @keyword.exception "^throw"))
 
 ((opcode) @comment
   (#eq? @comment "nop")) ; haha, anyone get it? ;)

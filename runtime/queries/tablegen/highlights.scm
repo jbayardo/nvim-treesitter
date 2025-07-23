@@ -84,7 +84,7 @@
     (_) @type))
 
 ((identifier) @type
-  (#lua-match? @type "^_*[A-Z][A-Z0-9_]+$"))
+  (#match? @type "^_*[A-Z][A-Z0-9_]+$"))
 
 ; Fields
 (instruction
@@ -156,4 +156,4 @@
 ] @comment @spell
 
 ((comment) @keyword.directive @nospell
-  (#lua-match? @keyword.directive "^.*RUN"))
+  (#match? @keyword.directive "^.*RUN"))
